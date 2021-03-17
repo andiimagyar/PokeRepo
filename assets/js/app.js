@@ -3,11 +3,13 @@ const formEl = document.querySelector("form");
 const inputEl = document.querySelector("input[type=text]");
 
 console.log(inputEl);
+
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
   pokemonContainer.innerHTML = "";
   getPokemon(inputEl.value);
 });
+
 async function getPokemon(name = "") {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
   const pokemon = await res.json();
@@ -32,7 +34,6 @@ async function getPokemon(name = "") {
       .join("")}</p>
    
     <div>
-    
   `;
 
   pokemonContainer.appendChild(pokemonEl);
