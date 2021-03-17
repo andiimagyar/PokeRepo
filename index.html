@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Pokemon Repo</title>
+    <meta
+      name="description"
+      content="Pokemon Encyclopedia"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="keywords" content="Pokemon" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
-    <title>Poké Encyclopedia</title>
-</head>
+  </head>
+  <body>
+    <header>
+      <header>
+        <h1>Poké Encyclopedia</h1>
+        <h2>Search for your favorite Pokémon to learn more about it and find some cool GIFs!</h2>
+    </header>
+    </header>
 
-<body>
- <header>
-     <h1>Poké Encyclopedia</h1>
-     <h2>Search for your favorite Pokémon to learn more about it and find some cool GIFs!</h2>
- </header>
-
- <form>
-    <input class="input" placeholder="Pokémon Name">
+    <form>
+      <input type="text" placeholder="Pokémon Name" />
+      <input type="submit" value="GO" class="button" />
+    </form>
     <br> </br>
-    <button class="button" id="button">GO</button>
- </form>
-
- <div class="pokeInfo">
-
- </div>
-
-    <script src="./assets/js/script.js"></script>
+    <br> </br>
+    <br> </br>
+    <br> </br>
+    
+    
+    <div class="pokemon-container"></div>
+    <script src="./assets/js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</body>
+  </body>
+</html>
