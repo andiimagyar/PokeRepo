@@ -37,6 +37,26 @@ async function getPokemon(name = "") {
   `;
 
   pokemonContainer.appendChild(pokemonEl);
+
+  function getGif() {
+    var searchTerm = document.querySelector('.gif').value
+    fetch(
+      'https://api.giphy.com/v1/gifs/search?q=' + 'pokemon' + '&api_key=aq1kqqFa3CJKTR7Sz6dkS3UDosSBGFrt&limit=20'
+    )
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      console.log(response.data[0]);
+      var gifContainerEl = document.querySelector('.gif');
+      gifContainerEl.innerHTML = '';
+      var gifImg = document.createElement('img');
+      gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
+      gifContainerEl.appendChild(gifImg);
+    });
+  }
+
+  getGif();
 }
 
 getPokemon();
