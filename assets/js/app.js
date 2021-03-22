@@ -25,9 +25,12 @@ prevPokemon.unshift(inputEl.value);
 localStorage.setItem("prevPokemon", JSON.stringify(prevPokemon));
 });
 
+
+
 async function getPokemon(name = "") {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
   const pokemon = await res.json();
+
 
   console.log(pokemon);
 
@@ -52,8 +55,10 @@ async function getPokemon(name = "") {
       .join("")}</p>
     <div>
   `;
-
+ 
   pokemonContainer.appendChild(pokemonEl);
+
+  
 
   function getGif() {
     var searchTerm = document.querySelector('.gif').value
@@ -72,19 +77,28 @@ async function getPokemon(name = "") {
       gifContainerEl.appendChild(gifImg);
     });
   }
-
+  
   getGif();
-}
+  
+
 
 function generateButtons() {
   for (i=0; i < prevPokemon.length; i++) {
     document.querySelector(".prevSearch").append(`
      ${prevPokemon[i]}
-    
-    
     `
 
     )
   }
+ 
 }
 generateButtons();
+}
+
+
+
+
+
+
+
+
