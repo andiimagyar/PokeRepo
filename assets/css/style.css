@@ -36,7 +36,69 @@ input {
 }
 
 .pokemon-container {
-    margin-top: 10%;
+    margin-top: 15%;
+}
+
+@media screen and (max-width: 980px) {
+    h1 {
+        font-size: 30px;
+    }
+    
+    .button {
+        background-color: rgba(255, 255, 255, 0%);
+        font-size: 18px;
+        border: none;
+        font-family: 'DotGothic16';
+        text-align: center;
+    }
+
+    .prevSearch {
+        color: white;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: none;
+        background-color: white;
+        color: black;
+        }
+    
+        .button:hover {
+            color:red;
+        }
+    
+        .pokemon-container {
+            margin-top: 5%;
+        }
+    
+        .prevSearch {
+            color:red;
+            font-size: 20px;
+        }
+}
+
+@media screen and (max-width: 575px) {
+    body {
+    background-image: none;
+    background-color: white;
+    color: black;
+    }
+
+    .button:hover {
+        color:red;
+    }
+
+    .pokemon-container {
+        margin-top: 5%;
+    }
+
+    .prevSearch {
+        color:red;
+        font-size: 20px;
+    }
 }
 
 
