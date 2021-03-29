@@ -83,6 +83,9 @@ async function getPokemon(name = "") {
 
 
 function generateButtons() {
+  
+  $(".prevSearch").empty();
+
   for (i=0; i < prevPokemon.length; i++) {
     document.querySelector(".prevSearch").append(`
      ${prevPokemon[i]}
